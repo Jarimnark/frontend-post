@@ -1,0 +1,4 @@
+<div *ngFor="let c of AllComment" class="border border-black rounded-3 p-2">
+  <div>Comment by: {{ mapName[c.user] || "-" }} : {{ c.comment }}</div>
+  <div>Comment Date: {{ c.create_at | datewithTime }}</div>
+</div>

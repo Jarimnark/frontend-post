@@ -1,0 +1,20 @@
+<div
+  class="border border-black rounded-3 w-100 p-3 d-flex flex-column gap-3 justify-content-start align-items-center"
+  style="height: 50vh"
+>
+  <div class="d-flex gap-3">
+    <span><strong>Title:</strong> {{ post.title }}</span>
+    <span><strong>Content:</strong> {{ post.contents }}</span>
+  </div>
+  <div class="overflow-auto" style="height: 70%">
+    <app-comment #commentCom [postId]="post._id"></app-comment>
+  </div>
+
+  <button
+    (click)="popupComment()"
+    class="border-0 text-white rounded-3"
+    style="background-color: rgb(52, 100, 84)"
+  >
+    comment
+  </button>
+</div>

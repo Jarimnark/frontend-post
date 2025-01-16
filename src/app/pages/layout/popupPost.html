@@ -1,0 +1,33 @@
+<div class="d-flex flex-column justify-content-center align-items-center h-100">
+  <h3>Post Form</h3>
+  <div class="p-4 d-flex flex-column rounded-3" style="border: 1px solid black">
+    <mat-form-field class="example-full-width">
+      <mat-label>Title</mat-label>
+      <input
+        type="text"
+        matInput
+        [(ngModel)]="title"
+        class="ps-3"
+        [ngModelOptions]="{standalone: true}"
+        (keydown.enter)="createPost()"
+      />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Content</mat-label>
+      <input
+        type="text"
+        matInput
+        [(ngModel)]="contents"
+        [ngModelOptions]="{standalone: true}"
+        (keydown.enter)="createPost()"
+      />
+    </mat-form-field>
+
+    <button
+      (click)="createPost()"
+      class="border-0 text-white fw-bold bg-dark p-2 rounded-3 mb-4"
+    >
+      Create Post
+    </button>
+  </div>
+</div>

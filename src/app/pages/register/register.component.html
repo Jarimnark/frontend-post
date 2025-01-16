@@ -1,0 +1,19 @@
+<div class="d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+    <h3>Register Form</h3>
+     <div class="p-4 d-flex flex-column rounded-3" style="border: 1px solid black;">
+    
+         <mat-form-field class="example-full-width">
+             <mat-label>Username</mat-label>
+             <input type="email" matInput [(ngModel)]="username" class="ps-3" [ngModelOptions]="{standalone: true}" (keydown.enter)="regist()">
+             
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput [(ngModel)]="password" [ngModelOptions]="{standalone: true}" (keydown.enter)="regist()">
+                
+            </mat-form-field>
+            
+            <button (click)="regist()" class="border-0 text-white fw-bold bg-secondary p-2 rounded-3" >Register</button>
+        </div>
+    </div>
+    
