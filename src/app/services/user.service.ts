@@ -22,6 +22,7 @@ export class UserService {
 
   public register(username: string, password: string) {
     const pathPost = `${this.baseUrl}/user`;
+    console.log('url', pathPost);
     return this.http.post(pathPost, { username, password });
   }
 
