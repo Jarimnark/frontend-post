@@ -28,6 +28,7 @@ export class UserService {
   public collectInfo({ id, username }: { id: string; username: string }) {
     localStorage.setItem('id', id);
     localStorage.setItem('username', username);
+    localStorage.setItem('login', 'true');
   }
 
   public changePassword(password: string, id: string) {

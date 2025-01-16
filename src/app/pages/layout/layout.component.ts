@@ -26,6 +26,11 @@ export class LayoutComponent {
     const dialog = this.dialog.open(popupPost, { height: '60vh' });
     this.dialog.afterAllClosed.subscribe((res) => {});
   }
+
+  logout() {
+    localStorage.setItem('login', 'false');
+    this.router.navigateByUrl('/login');
+  }
 }
 
 @Component({
